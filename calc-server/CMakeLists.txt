@@ -18,7 +18,11 @@ set(JSON_BuildTests OFF CACHE INTERNAL "")
 # unintended consequences that will break the build.  It's generally
 # discouraged (although not necessarily well documented as such) to use
 # include(...) for pulling in other CMake projects anyways.
+<<<<<<< HEAD
 add_subdirectory(json)
+=======
+add_subdirectory(nlohmann_json)
+>>>>>>> 9ccfdc5388775e7005e02d960092c844d1bb226a
 
 target_link_libraries(server PRIVATE nlohmann_json::nlohmann_json)
 
