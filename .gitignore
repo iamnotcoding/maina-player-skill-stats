@@ -1,5 +1,0 @@
-calc-server/.*/
-calc-server/out/
-calc-client/.*
-calc-client/venv/
-calc-client/__*/

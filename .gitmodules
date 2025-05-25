@@ -1,6 +1,0 @@
-[submodule "calc-server/json"]
-	path = calc-server/json
-	url = https://github.com/nlohmann/json
-[submodule "calc-server/etterna"]
-	path = calc-server/etterna
-	url = https://github.com/etternagame/etterna
