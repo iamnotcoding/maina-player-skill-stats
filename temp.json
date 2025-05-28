@@ -107,3 +107,18 @@
         "pp": 450.828
     }
 }
+
+{
+    "Server": "nginx/1.19.6",
+    "Date": "Wed, 28 May 2025 02:19:30 GMT",
+    "Content-Type": "application/octet-stream",
+    "Content-Length": "2840455",
+    "Last-Modified": "Wed, 21 May 2025 09:39:48 GMT",
+    "Connection": "keep-alive",
+    "ETag": "\"682d9f64-2b5787\"",
+    "Expires": "Wed, 28 May 2025 02:21:30 GMT",
+    "Cache-Control": "max-age=120",
+    "content-disposition": "attachment; filename=\"1%20Kenji%20Ninuma%20-%20DISCO%20PRINCE.osz\"; filename*=utf-8''1%20Kenji%20Ninuma%20-%20DISCO%20PRINCE.osz",
+    "access-control-allow-origin": "*",
+    "Accept-Ranges": "bytes"
+}
