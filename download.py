@@ -39,7 +39,7 @@ async def download_beatmapset(
 
     file_name = get_file_name_from_header(dict(response.headers))
 
-    with open(f"{directory_path}/{file_name}", "wb+") as file:
+    with open(f"{directory_path}/{file_name}", "w+b") as file:
         file.write(response.content)
 
     return True, file_name
@@ -63,7 +63,7 @@ async def download_beatmapsets(beatmapset_ids: list[int], directory_path: str, c
     tasks: set[Any] = set()
     i = 0
 
-    while len(beatmapset_ids) - concurrent_count
+    while len(beatmapset_ids) - i >= concurrent_count:
         for beatmapset_id in beatmapset_ids[i : i+concurrent_count]:
             print(f'test : {beatmapset_id}')
             task = asyncio.create_task(download_beatmapset(beatmapset_id, directory_path))
@@ -72,8 +72,6 @@ async def download_beatmapsets(beatmapset_ids: list[int], directory_path: str, c
 
         await asyncio.gather(*tasks)
         print('group ended')
-
-    if len(beatmapset_ids) - concurrent_count > 0:
         i += concurrent_count
 
     for beatmapset_id in beatmapset_ids[i:]:
@@ -91,4 +89,4 @@ async def download_beatmapsets(beatmapset_ids: list[int], directory_path: str, c
     await asyncio.gather(*tasks)
 
 
-asyncio.run(download_beatmapsets([i for i in range(17)], "./beatmapsets"))
+asyncio.run(download_beatmapsets([i for i in range(1)], "./beatmapsets"))
